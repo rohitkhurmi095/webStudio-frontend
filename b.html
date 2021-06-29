@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Site</title>
+    <meta charset="utf-8">
+    <!--Responsive web Design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="b2.jpeg">
+
+    <!-- https://fontawesome.com/icons?d=gallery-->
+    <!--fontstyle from Fontawesome.com-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+     <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--CSS File-->
+    <link rel="stylesheet" type="text/css" href="b.css">
+
+</head>
+<body>
+    
+    <!--TOP-HEADER-->
+    <!--_____________________________________________________-->
+    <header id="body-header">
+        <!--_____________________________________________________-->
+        <!--NAVBAR-->
+        <!--_____________________________________________________-->
+        <div class="navbar">
+            <!--Nav-Menu-->
+            <div class="nav-menu">
+                <ul>
+                    <li>
+                        <img id="logo" src="logo2.png">
+                    </li>
+                    <li>
+                        <a href="#home"><span id="brand1">Web</span><br><span id="brand2">Studio</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="items">
+                    <li>
+                    <div class="dropdown">
+                            <span class="dropbtn" style="color:silver; font-family:arial; text-shadow:1px 2px 1px black;">Favourites</span>
+                            <div class="dropdown-content">
+                                <a href="#english">Latest English</a>
+                                <a href="#hindi">Latest Hindi</a>
+                                <a href="#punjabi">Latest Punjabi</a>
+                                <a href="#livemusic">Live Music</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Search+bell+user-->
+            <div class="flex-end">
+
+                <!--Search-box-->
+                <div id="end">
+                    <div class="searchbar">
+                        <i id="srch" class="fas fa-search icon"></i>
+                        <input class="input-field" type="text" placeholder="Search">
+                        <a href="">
+                            <i id="voice" class="fas fa-microphone icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--Bell+user-->
+                <div class="last">
+                    <!--bell-->
+                    <div id="user">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <!--user-->
+                    <div id="user">
+                        <a target="_blank" href="#user">
+                            <img id="logo1" src="pr.png">
+                        </a>
+                    </div>
+                </div>
+
+        </div>
+    </header>
+    <!--_____________________________________________________-->
+
+
+
+
+    <!--Main section-->
+    <main>
+        <div class="container">
+            
+            <div class="inner-div1">
+
+                <!--_____________________________________________________-->
+                <!--CSS CAROUSEL-->
+                <!--_____________________________________________________-->
+                <div class="slideshow-container">
+                    <!--slide1-->
+                    <div class="mySlides ">
+                        <a href=""><img src="cover/34.jpg" style="width:100%"></a>
+                        <div class="text">Caption one</div>
+                    </div>
+                    <!--slide2-->
+                    <div class="mySlides ">
+                        <a href=""><img src="cover/32.jpg" style="width:100%"></a>
+                        <div class="text">Caption Two</div>
+                    </div>
+                    <!--slide3-->
+                    <div class="mySlides ">
+                        <a href=""><img src="cover/33.jpg" alt="album3" style="width:100%"></a>
+                        <div class="text">Caption Three</div>
+                    </div>
+                    <!--Left/Right-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <!--*Radio-buttons*-->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+
+            <!--SCRIPT to Control slider-->
+            <script>
+                var slideIndex = 0;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block"; 
+                        dots[slideIndex-1].className += " active";
+                    }
+            </script>
+
+
+                <!--_____________________________________________________-->
+                <!--LATEST RELEASE-->
+                <!--_____________________________________________________-->
+                <div class="inner-div2 ">
+                    <p style="color:ghostwhite;">Latest Release</p>
+
+                <!--SCROLLBAR-->
+                <section class="flx scrolling-wrapper0">
+
+
+                    <!--box1-->
+                    <div id="f-div">
+                        <div class="l-img">
+                            <img src="hindi/1.png" width="80" height="80">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls2">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">onism</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="dropdown dropleft float-left center" data-toggle="dropdown">
+                                 &nbsp;<i class="fas fa-ellipsis-h center"></i>
+
+                                <div class="dropdown-menu">
+                                   <ul class = "no-list-style">
+                                        <li>
+                                            <a href="">
+                                                <i  id="icon" class="fas fa-play"></i>
+                                                <span id="cl">Play Now</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-plus"></i>
+                                                <span id="cl">Add To Queue</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-tasks"></i>
+                                                <span id="cl">Add Favourites</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-info-circle"></i>
+                                                <span id="cl">Get Info</span> 
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <p class="p-txt">4:44</p>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+
+                    <!--box2-->
+                    <div id="f-div">
+                        <div class="l-img">
+                            <img src="hindi/4.png" width="80" height="80">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls2">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">onism</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="dropdown dropleft float-left center" data-toggle="dropdown">
+                                 &nbsp;<i class="fas fa-ellipsis-h center"></i>
+
+                                <div class="dropdown-menu">
+                                   <ul class = "no-list-style">
+                                        <li>
+                                            <a href="">
+                                                <i  id="icon" class="fas fa-play"></i>
+                                                <span id="cl">Play Now</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-plus"></i>
+                                                <span id="cl">Add To Queue</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-tasks"></i>
+                                                <span id="cl">Add Favourites</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-info-circle"></i>
+                                                <span id="cl">Get Info</span> 
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <p class="p-txt">4:44</p>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+
+
+                    <!--box3-->
+                    <div id="f-div">
+                        <div class="l-img">
+                            <img src="hindi/6.png" width="80" height="80">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls2">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">onism</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="dropdown dropleft float-left center" data-toggle="dropdown">
+                                 &nbsp;<i class="fas fa-ellipsis-h center"></i>
+
+                                <div class="dropdown-menu">
+                                   <ul class = "no-list-style">
+                                        <li>
+                                            <a href="">
+                                                <i  id="icon" class="fas fa-play"></i>
+                                                <span id="cl">Play Now</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-plus"></i>
+                                                <span id="cl">Add To Queue</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-tasks"></i>
+                                                <span id="cl">Add Favourites</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-info-circle"></i>
+                                                <span id="cl">Get Info</span> 
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <p class="p-txt">4:44</p>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+
+
+                    <!--box4-->
+                    <div id="f-div">
+                        <div class="l-img">
+                            <img src="punjabi/1.png" width="80" height="80">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls2">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">onism</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="dropdown dropleft float-left center" data-toggle="dropdown">
+                                 &nbsp;<i class="fas fa-ellipsis-h center"></i>
+
+                                <div class="dropdown-menu">
+                                   <ul class = "no-list-style">
+                                        <li>
+                                            <a href="">
+                                                <i  id="icon" class="fas fa-play"></i>
+                                                <span id="cl">Play Now</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-plus"></i>
+                                                <span id="cl">Add To Queue</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-tasks"></i>
+                                                <span id="cl">Add Favourites</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-info-circle"></i>
+                                                <span id="cl">Get Info</span> 
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <p class="p-txt">4:44</p>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+
+                    <!--box5-->
+                    <div id="f-div">
+                        <div class="l-img">
+                            <img src="punjabi/4.png" width="80" height="80">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls2">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">onism</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="dropdown dropleft float-left center" data-toggle="dropdown">
+                                 &nbsp;<i class="fas fa-ellipsis-h center"></i>
+
+                                <div class="dropdown-menu">
+                                   <ul class = "no-list-style">
+                                        <li>
+                                            <a href="">
+                                                <i  id="icon" class="fas fa-play"></i>
+                                                <span id="cl">Play Now</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-plus"></i>
+                                                <span id="cl">Add To Queue</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-tasks"></i>
+                                                <span id="cl">Add Favourites</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-info-circle"></i>
+                                                <span id="cl">Get Info</span> 
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <p class="p-txt">4:44</p>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+
+                    <!--box6-->
+                    <div id="f-div">
+                        <div class="l-img">
+                            <img src="punjabi/7.png" width="80" height="80">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls2">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">onism</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="dropdown dropleft float-left center" data-toggle="dropdown">
+                                 &nbsp;<i class="fas fa-ellipsis-h center"></i>
+
+                                <div class="dropdown-menu">
+                                   <ul class = "no-list-style">
+                                        <li>
+                                            <a href="">
+                                                <i  id="icon" class="fas fa-play"></i>
+                                                <span id="cl">Play Now</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-plus"></i>
+                                                <span id="cl">Add To Queue</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-tasks"></i>
+                                                <span id="cl">Add Favourites</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i id="icon" class="fas fa-info-circle"></i>
+                                                <span id="cl">Get Info</span> 
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <p class="p-txt">4:44</p>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+
+
+                </section>
+            </div>
+
+
+                
+                <!--_____________________________________________________-->
+                <!--POPULAR ARTISTS-->
+                <!--_____________________________________________________-->
+                <div class="inner-div2">
+                    <p style="color:ghostwhite;">Popular Artists</p>
+
+                    <!--SCROLLBAR-->
+                    <section class="scrolling-wrapper">
+
+                        <!--box1-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/1.png" width="110" height="110">
+                                </a>
+                               <figcaption class="fig">Neha Kakkar</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box2-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/2.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Kishore Kumar</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box3-->
+                        <div class="ib"> 
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/3.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Jass Manak</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box4-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/4.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Jassi Gill</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box5-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/5.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Diljit Dosanjh</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box6-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/6.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Satinder Sartaj</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box7-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/7.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Guru Randhawa</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box8-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/8.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Eminem</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box9-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/9.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Ed Sheeran</figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box10-->
+                        <div class="ib">
+                            <figure>
+                                <a href="artist.html">
+                                    <img id="art" src="artist/10.png" width="110" height="110">
+                                </a>
+                                <figcaption class="fig">Justin Bieber</figcaption>
+                            </figure>
+                        </div>
+
+                    </section>
+                </div>
+
+
+                <!--_____________________________________________________-->
+                <!--STATIONS-->
+                <!--_____________________________________________________-->
+                <div class="inner-div2 back">
+                    <!--SCROLLBAR-->
+                    <section id="livemusic" class="scrolling-wrapper1">
+
+
+                        <div class="ib1">
+                            <a href="">
+                                <img id="art1" style="margin-right:74px;border:2px solid grey; border-radius:15px;" src="station/1.jpg" width="130" height="80">
+                            </a>   
+                        </div>
+
+
+                        <div class="ib1">
+                            <a href="">
+                                <img id="art1" src="station/luv.jpg" width="80" height="80">
+                                <!--<span class="color-overlay"></span>-->
+                            </a>   
+                            <p id="name">Love</p>
+                        </div>
+
+
+                        <div class="ib1">
+                            <a href="">
+                                <img id="art1" src="station/ret.jpg" width="80" height="80">
+                            </a>
+                            <p id="name">Retro</p>   
+                        </div>
+
+                        <div class="ib1">
+                            <a href="">
+                                <img id="art1" src="station/chill.jpg" width="80" height="80">
+                            </a>  
+                            <p id="name">Chill</p> 
+                        </div>
+
+                        <div class="ib1">
+                            <a href="">
+                                <img id="art1" src="station/wrk.jpg" width="80" height="80">
+                            </a> 
+                            <p id="name">Workout</p>  
+                        </div>
+
+                        <div class="ib1">
+                            <a href="">
+                                <img id="art1" src="station/rock.jpg" width="80" height="80">
+                            </a> 
+                            <p id="name">Rock</p>  
+                        </div>
+
+                        <div class="ib1">
+                            <a href="">
+                                <img id="art1" src="station/pop.jpg" width="80" height="80">
+                            </a> 
+                            <p id="name">Pop</p>  
+                        </div>
+
+                    </section>
+                </div>
+
+
+
+                <!--_____________________________________________________-->
+                <!--PARTY-->
+                <!--_____________________________________________________-->
+                    <!--ScrollBar-->
+                    <section class="wrapper1 scrolling-wrapper5 inner-div4">
+
+            
+                        <div id="p-div1" >
+                            <a href="#trap"><img src="party/1.jpg" height="160px" width="300px"></a>
+                        </div>
+
+                        <div id="p-div2" >
+                            <a href="#bass"><img src="party/2.jpg" height="160px" width="300px"></a>
+                        </div>
+
+                        <div id="p-div3" >
+                           <a href="#hiphop"><img src="party/3.jpg" height="160px" width="300px"></a> 
+                        </div>
+
+                    </section>
+        
+
+                
+               
+                <!--_____________________________________________________-->
+                <!--LATEST ENGLISH-->
+                <!--_____________________________________________________-->
+                <div class="inner-div2">
+                    <p style="color:ghostwhite;">Latest English</p>
+
+                    <section id="english" class="scrolling-wrapper3">
+
+                        <!--box1-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/1.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Mia</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                        <!--box2-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/2.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Brown Boys</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                        <!--box3-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/3.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">B-Boy</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                        <!--box4-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/4.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Vamos</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                        <!--box5-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/5.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Hello Hello</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box6-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/6.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Enemy</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box7-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/7.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Seventies</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box8-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/8.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Champion</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box9-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/9.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Sexy People</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box10-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="english/10.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Smack That</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </section>
+                </div>
+
+
+                <!--_____________________________________________________-->
+                <!--LATEST HINDI -->
+                <!--_____________________________________________________-->
+                <div class="inner-div2">
+                    <p style="color:ghostwhite;">Latest Hindi</p>
+
+                    <!--ScrollBar-->
+                    <section id="hindi" class="scrolling-wrapper3">
+
+                        <!--box1-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/1.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">First Class</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box2-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/2.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Judda</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                        <!--box3-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/3.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Saki</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box4-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/4.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Hate Story</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box5-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/5.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Kaabil</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box6-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/6.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Kaise Hua</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box7-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/7.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Luvstory</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box8-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/8.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Raazi</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box9-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/9.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Hum Tum</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box10-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="hindi/10.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Dil ha mushkil</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </section>
+                </div>
+
+
+
+
+                <!--_____________________________________________________-->
+                <!--LATEST PUNJABI -->
+                <!--_____________________________________________________-->
+                <div class="inner-div2">
+                    <p style="color:ghostwhite;">Latest Punjabi</p>
+
+                    <!--ScrollBar-->
+                    <section id="punjabi" class="scrolling-wrapper3">
+
+                        <!--box1-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/1.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Badnam</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box2-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/2.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Nakhra</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                        <!--box3-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/3.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Pendu Jatt</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box4-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/4.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">True Talk</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box5-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/5.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Hath Chumme</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box6-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/6.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Life</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box7-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/7.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Ja Ve Ja</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box8-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/8.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Its all about u</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box9-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/9.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Prada</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <!--box10-->
+                        <div class="ib3">
+                            <figure>
+                                <a href="#details">
+                                    <img id="art3" src="punjabi/10.png" width="110" height="110">
+                                </a>
+                                <a href="#play">
+                                    <div class="container-box-controls">
+                                        <i class="fas fa-play" onclick="document.getElementById('player').play()"></i>
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <span id="f1">Sartaj</span>
+                                    <br>
+                                    <span id="f2">AUG 11,2017</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </section>
+                </div>
+
+            </div>
+        </div>
+        <!--______________<<main content end>>_____________________________________-->
+        <br><br><br>
+
+        <!--_____________________________________________________-->
+        <!-- FOOTER START -->
+        <!--_____________________________________________________-->
+        <div class="footer">
+            <div class="contain">
+
+                <div class="col">
+                    <h1>Albums</h1>
+                    <ul>
+                        <li>English</li>
+                        <li>Hindi</li>              
+                        <li>Punjabi</li>
+                        <li>Bhojpuri</li>
+                        <li>Haryanvi</li>
+                    </ul>
+                </div>
+                <div class="col">
+                  <h1>Genres</h1>
+                  <ul>
+                    <li>Bollywood</li>
+                    <li>Romantic</li>
+                    <li>Patrotic</li>
+                    <li>Bhajan</li>
+                    <li>Sufi</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Artists</h1>
+                <ul>
+                    <li>Arijit Singh</li>
+                    <li>Neha Kakkar</li>
+                    <li>Armaan Malik</li>
+                    <li>Guru Randhawa</li>
+                    <li>Justin Bieber</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>New Release</h1>
+                <ul>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Punjabi</li>
+                    <li>Tamil</li>
+                    <li>Haryanvi</li>
+                    <li>Bhojpuri</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Trending Songs</h1>
+                <ul>
+                    <li>Coca Cola</li>
+                    <li>Bad Boy</li>
+                    <li>Teri Mitti</li>
+                    <li>Cheap Thrills</li>
+                    <li>Despacito</li>
+                </ul>
+            </div>
+
+            <div class="clearfix">
+                <div class="col">
+                    <h1>Support</h1>
+                    <ul>
+                        <li>Contact us</li>
+                        <li>Web chat</li>
+                        <li>Open ticket</li>
+                    </ul>
+                </div>
+                <div class="col social">
+                    <h1>Social</h1>
+                    <ul>
+                        <li>
+                            <img src="https://svgshare.com/i/5fq.svg" width="22" style="width: 22px;">
+                        </li>
+                        <li>
+                            <img src="https://svgshare.com/i/5eA.svg" width="22" style="width: 22px;">
+                        </li>
+                        <li>
+                            <img src="https://svgshare.com/i/5f_.svg" width="22" style="width: 22px;">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <br><br>
+        </div>
+        <br>
+        <!-- END OF FOOTER -->
+        <!--_____________________________________________________-->
+    </main>  <!--End of Main-->
+    <!--_____________________________________________________-->
+
+
+
+    <!--_____________________________________________________-->
+    <!--ASIDE SECTION -->
+    <!--_____________________________________________________-->
+                <!--QUEUE LIST-->
+    <!--_____________________________________________________-->
+    <!--QUEUE-->
+    <aside>
+        <section>
+        <span id="fix">
+            <header id="headerx">
+                <h4 style="font-family:cursive;display:inline;color:red;text-shadow:1px 1px 1px black;">Queue</h4>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                <div class="dropdown" id="d-line">
+                    <span id="quex">Queue</span>
+                    <span class="dropdown-toggle"id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="tsp">
+                    </span>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <ul class = "no-list-style">
+                            <li>
+                                <a class="dropdown-item" href="#">Playlist</a>
+                            </li>
+                            <li class="no-list-style">
+                                <a class="dropdown-item" href="#">Favourites Songs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+
+            </header>
+        </span>
+
+        <br>
+
+        <div class="inner-divx ">
+            <p style="color:ghostwhite;"></p>
+
+            <ol id="ol-shift">
+                <section class="flx scrolling-wrapper0">
+                    
+                    <li id="clck">
+
+                    <!--box1-->
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="hindi/1.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">First Class</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <li id="clck">
+                    <!--box2-->
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="hindi/4.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Hate Story</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <li id="clck">
+                    <!--box3-->
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="hindi/6.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Kaise Hua</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <li id="clck">
+                    <!--box4-->
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="punjabi/1.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Badnam</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+                    
+                    <li id="clck">
+                    <!--box5-->
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="punjabi/4.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">True Talk</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <!--box6-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="punjabi/7.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Ja Ve Ja</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <!--box7-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="punjabi/9.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Parada</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <!--box8-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="punjabi/5.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Hath Chume</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+
+                    <!--box9-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="english/3.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">B-boy</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <!--box10-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="english/10.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Smack That</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <!--box11-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="hindi/5.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Kaabil</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                    <!--box12-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="hindi/8.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Raazi</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+
+                    <!--box13-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="hindi/10.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">Dil Mushkil</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+
+                    <!--box14-->
+                    <li id="clck">
+                    <div id="f-divx">
+                        <div class="l-img">
+                            <img src="punjabi/8.png" width="60" height="60">
+                        </div>
+                        <a href="#play">
+                            <div class="container-box-controls1">
+                                <i class="fas fa-play"  onclick="document.getElementById('player').play()"></i>
+                            </div>
+                        </a>
+                        &nbsp;
+                        <div class="l-text">
+                            <p><span id="t1">All about u</span><br><span id="t2">Aug11,2017</span></p>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="l-btn">
+                            <span class="center">
+                                 &nbsp; <i onclick="myFunction(this)" class="far fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!--box-traial-->
+                    </li>
+
+                </ol>
+
+                </section>
+            </div>
+            <br><br><br><br><br><br><br><br>
+
+        </section>       
+    </aside>
+
+
+
+
+
+    
+    <!--_____________________________________________________-->
+                <!--Music Player-->
+    <!--_____________________________________________________-->
+
+    <div class="navbar5">
+
+        <div id="ml5">
+
+            <div class="inner-div02">
+                <!--box1-->
+
+                        <div class='some-page-wrapper'>
+                            <div class='row'>
+
+                                <div class='column'>
+                                    <div class='green-column'>
+                                       <ol class=" no-list-style horizontal-list">
+                                <li>
+                                    <img src="artist/4.png" width="60" height="50">
+                                </li>
+                                <li id="l3">
+                                    <div class="l-text">
+                                        <p><span id="t1">Imagine By John</span><br><span id="t2">John Lennon</span></p>
+                                    </div>
+                                </li>
+                                <li id="time">
+                                    <span>
+                                        <i onclick="myFunction(this)" class="far fa-heart">
+                                        &nbsp;</i><i class="fas fa-ban"></i>
+                                    </span>
+                                </li>
+                            </ol>
+                         </div>
+                    </div>
+                    
+                    <div class='column'>
+                                    <div class='blue-column'>
+                                         <audio id="player"src="audio/imagine.mp3" controls>       </audio>
+                                        <span id="m-flx" style="color:white;">
+                                        <i class="hvr fas fa-random"></i>&nbsp;&nbsp;
+                                        <i class="hvr fas fa-backward"></i>&nbsp;&nbsp;
+                                        <i id="play" onclick="myFunction2(this)" style="font-size:30px;" class=" hvr fas fa-play-circle"></i>&nbsp;&nbsp;
+                                        <i class=" hvr fas fa-forward"></i>&nbsp;&nbsp;
+                                        <i class=" hvr fas fa-redo-alt"></i>&nbsp;&nbsp; </span>
+                                    </div>
+                    </div>
+
+                    <div class='column'>
+                                    <div class='orange-column'>
+                                        <span style="float:right;" class="center">
+                                            <i style="font-size:16px;padding:5px;" class="fas fa-volume-up"></i>&nbsp;<input type="range">
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+        <div>
+    </div>
+
+   <!--________________________________________________________________-->
+
+    <!--JS FILE-->
+    <script type="text/javascript" src="b.js"></script>
+
+   
+   
+    <!--BOOTSTRAP-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!--________________________________________________________________-->
+
+</body>
+</html>
